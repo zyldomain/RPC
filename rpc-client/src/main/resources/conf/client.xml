@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<KRPC>
+	<!--
+		zookeeper注册中心
+	-->
+	<zookeeper ip="120.78.77.206:2183"/>
+	<!-- 
+		缓存配置
+	 -->
+	<cache enable="true" timeout="15000" />
+	<!-- 
+		负载均衡
+	 -->
+	<LoadBalancingStrategy  className="com.rpc.client.loadBalance.RandomLoadBalance"/>
+	<!--
+		配置服务
+	 -->
+	<service name="userService" className="com.rpc.service.Impl.UserServiceImpl" timeout="150000"/>   
+  	 <service name="appleService" className="com.rpc.service.Impl.AppleServiceImpl" timeout="150000"/> 
+  	 <service name="personService" className="com.rpc.service.Impl.PersonServiceImpl" timeout="150000"/> 
+</KRPC>
